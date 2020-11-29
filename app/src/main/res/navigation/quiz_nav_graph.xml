@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quiz_nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="in.techashram.quizapp.ui.fragments.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/startFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="in.techashram.quizapp.ui.fragments.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/queFragment"
+        android:name="in.techashram.quizapp.ui.fragments.QueFragment"
+        android:label="fragment_que"
+        tools:layout="@layout/fragment_que" >
+        <action
+            android:id="@+id/action_queFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <argument
+            android:name="quiz_id"
+            app:argType="string" />
+        <argument
+            android:name="quizName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="in.techashram.quizapp.ui.fragments.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="quizId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_resultFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@id/resultFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="in.techashram.quizapp.ui.fragments.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_queFragment"
+            app:destination="@id/queFragment" />
+        <argument
+            android:name="quiz"
+            app:argType="in.techashram.quizapp.model.QuizList" />
+    </fragment>
+</navigation>

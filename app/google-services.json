@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1091596486900",
+    "firebase_url": "https://quizapp-e2dcb.firebaseio.com",
+    "project_id": "quizapp-e2dcb",
+    "storage_bucket": "quizapp-e2dcb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091596486900:android:346003ce0818fd7aa0f6a1",
+        "android_client_info": {
+          "package_name": "in.techashram.quizapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091596486900-7epu14lfphiom5ss7hj9jfhbhoh09hu3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvODpHW0l4vKOZhrji7ao823PFrBUb7hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1091596486900-7epu14lfphiom5ss7hj9jfhbhoh09hu3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
